@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Catálogo Interativo</title>
+  <style>
+    body { font-family: sans-serif; max-width: 600px; margin: 2rem auto; padding: 0 1rem; }
+    .card { border: 1px solid #ccc; padding: 1rem; margin-bottom: 0.5rem; border-radius: 8px; display: flex; justify-content: space-between; align-items: center; }
+    .favorito { background-color: #fff3cd; border-color: #ffeeba; }
+    button { cursor: pointer; padding: 6px 12px; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Catálogo de Jogos Favoritos</h1>
+  </header>
+
+  <main>
+    <section id="grade-itens">
+      <article class="card" data-titulo="Brawl Stars">
+        <span class="card-titulo">Brawl Stars</span>
+        <button class="btn-fav">Favoritar</button>
+      </article>
+      <article class="card" data-titulo="Free Fire">
+        <span class="card-titulo">Free Fire</span>
+        <button class="btn-fav">Favoritar</button>
+      </article>
+      <article class="card" data-titulo="EA Sports FC">
+        <span class="card-titulo">EA Sports FC</span>
+        <button class="btn-fav">Favoritar</button>
+      </article>
+    </section>
+  </main>
+
+  <script src="app.js" defer></script>
+</body>
+</html>
