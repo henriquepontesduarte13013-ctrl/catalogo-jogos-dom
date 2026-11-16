@@ -18,49 +18,49 @@
   ];
 
   function jogo(titulo, categoria, arquivo) {
-    return { titulo: titulo, categoria: categoria, capa: 'assets/images/capa-' + arquivo + '.svg' };
+    return { titulo: titulo, categoria: categoria, capa: 'assets/images/capa-' + arquivo };
   }
 
   const jogos = [
     // Jogos originais
-    jogo('Brawl Stars', 'Ação e Aventura', 'brawl-stars'),
-    jogo('Free Fire', 'Battle Royale', 'free-fire'),
-    jogo('EA Sports FC', 'Esportes e Corrida', 'ea-sports-fc'),
+    jogo('Brawl Stars', 'Ação e Aventura', 'brawl-stars.jpg'),
+    jogo('Free Fire', 'Battle Royale', 'free-fire.png'),
+    jogo('EA Sports FC', 'Esportes e Corrida', 'ea-sports-fc.jpg'),
     // Ação e aventura
-    jogo('God of War Ragnarök', 'Ação e Aventura', 'god-of-war-ragnarok'),
-    jogo('The Legend of Zelda: Breath of the Wild', 'Ação e Aventura', 'zelda-breath-of-the-wild'),
+    jogo('God of War Ragnarök', 'Ação e Aventura', 'god-of-war-ragnarok.jpg'),
+    jogo('The Legend of Zelda: Breath of the Wild', 'Ação e Aventura', 'zelda-breath-of-the-wild.jpg'),
     // Battle Royale
-    jogo('Fortnite', 'Battle Royale', 'fortnite'),
-    jogo('PUBG: Battlegrounds', 'Battle Royale', 'pubg-battlegrounds'),
-    jogo('Apex Legends', 'Battle Royale', 'apex-legends'),
+    jogo('Fortnite', 'Battle Royale', 'fortnite.jpg'),
+    jogo('PUBG: Battlegrounds', 'Battle Royale', 'pubg-battlegrounds.jpg'),
+    jogo('Apex Legends', 'Battle Royale', 'apex-legends.jpg'),
     // Esportes e corrida
-    jogo('Rocket League', 'Esportes e Corrida', 'rocket-league'),
-    jogo('Forza Horizon 5', 'Esportes e Corrida', 'forza-horizon-5'),
-    jogo('Mario Kart 8 Deluxe', 'Esportes e Corrida', 'mario-kart-8-deluxe'),
+    jogo('Rocket League', 'Esportes e Corrida', 'rocket-league.jpg'),
+    jogo('Forza Horizon 5', 'Esportes e Corrida', 'forza-horizon-5.jpg'),
+    jogo('Mario Kart 8 Deluxe', 'Esportes e Corrida', 'mario-kart-8-deluxe.jpg'),
     // Mundo aberto e sandbox
-    jogo('GTA V', 'Mundo Aberto e Sandbox', 'gta-v'),
-    jogo('Minecraft', 'Mundo Aberto e Sandbox', 'minecraft'),
-    jogo('Terraria', 'Mundo Aberto e Sandbox', 'terraria'),
+    jogo('GTA V', 'Mundo Aberto e Sandbox', 'gta-v.jpg'),
+    jogo('Minecraft', 'Mundo Aberto e Sandbox', 'minecraft.jpg'),
+    jogo('Terraria', 'Mundo Aberto e Sandbox', 'terraria.jpg'),
     // RPG
-    jogo('Genshin Impact', 'RPG', 'genshin-impact'),
-    jogo('Elden Ring', 'RPG', 'elden-ring'),
-    jogo('The Witcher 3', 'RPG', 'the-witcher-3'),
+    jogo('Genshin Impact', 'RPG', 'genshin-impact.jpg'),
+    jogo('Elden Ring', 'RPG', 'elden-ring.jpg'),
+    jogo('The Witcher 3', 'RPG', 'the-witcher-3.jpg'),
     // FPS e MOBA
-    jogo('Valorant', 'FPS e MOBA', 'valorant'),
-    jogo('Counter-Strike 2', 'FPS e MOBA', 'counter-strike-2'),
-    jogo('League of Legends', 'FPS e MOBA', 'league-of-legends'),
-    jogo('Dota 2', 'FPS e MOBA', 'dota-2'),
+    jogo('Valorant', 'FPS e MOBA', 'valorant.jpg'),
+    jogo('Counter-Strike 2', 'FPS e MOBA', 'counter-strike-2.jpg'),
+    jogo('League of Legends', 'FPS e MOBA', 'league-of-legends.svg'),
+    jogo('Dota 2', 'FPS e MOBA', 'dota-2.jpg'),
     // Estratégia e simulação
-    jogo('Clash of Clans', 'Estratégia e Simulação', 'clash-of-clans'),
-    jogo('Civilization VI', 'Estratégia e Simulação', 'civilization-vi'),
-    jogo('The Sims 4', 'Estratégia e Simulação', 'the-sims-4'),
-    jogo('Stardew Valley', 'Estratégia e Simulação', 'stardew-valley'),
+    jogo('Clash of Clans', 'Estratégia e Simulação', 'clash-of-clans.jpg'),
+    jogo('Civilization VI', 'Estratégia e Simulação', 'civilization-vi.jpg'),
+    jogo('The Sims 4', 'Estratégia e Simulação', 'the-sims-4.jpg'),
+    jogo('Stardew Valley', 'Estratégia e Simulação', 'stardew-valley.jpg'),
     // Plataforma, luta, party e terror
-    jogo('Hollow Knight', 'Plataforma, Luta e Terror', 'hollow-knight'),
-    jogo('Super Mario Odyssey', 'Plataforma, Luta e Terror', 'super-mario-odyssey'),
-    jogo('Street Fighter 6', 'Plataforma, Luta e Terror', 'street-fighter-6'),
-    jogo('Among Us', 'Plataforma, Luta e Terror', 'among-us'),
-    jogo('Resident Evil 4', 'Plataforma, Luta e Terror', 'resident-evil-4')
+    jogo('Hollow Knight', 'Plataforma, Luta e Terror', 'hollow-knight.jpg'),
+    jogo('Super Mario Odyssey', 'Plataforma, Luta e Terror', 'super-mario-odyssey.jpg'),
+    jogo('Street Fighter 6', 'Plataforma, Luta e Terror', 'street-fighter-6.jpg'),
+    jogo('Among Us', 'Plataforma, Luta e Terror', 'among-us.jpg'),
+    jogo('Resident Evil 4', 'Plataforma, Luta e Terror', 'resident-evil-4.jpg')
   ];
 
   const SVG_NS = 'http://www.w3.org/2000/svg';
@@ -162,7 +162,7 @@
     const capa = document.createElement('img');
     capa.className = 'card-capa';
     capa.src = jogo.capa;
-    capa.alt = 'Capa ilustrativa de ' + jogo.titulo;
+    capa.alt = (jogo.capa.endsWith('.svg') ? 'Capa ilustrativa de ' : 'Capa de ') + jogo.titulo;
     capa.width = 640;
     capa.height = 360;
     capa.loading = 'lazy';
