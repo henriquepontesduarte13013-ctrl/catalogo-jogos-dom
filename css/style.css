@@ -228,8 +228,8 @@ main {
 /* ---------- Cards ---------- */
 .grade {
   display: grid;
-  grid-template-columns: 1fr;
-  gap: 1rem;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.75rem;
 }
 
 .card {
@@ -247,20 +247,27 @@ main {
   border-color: var(--cor-primaria);
 }
 
+/* Moldura 2:3 igual para todos; contain = sem distorção e sem cortes */
 .card-capa {
   width: 100%;
   height: auto;
-  aspect-ratio: 16 / 9;
-  object-fit: cover;
-  background: var(--cor-grafite-claro);
+  aspect-ratio: 2 / 3;
+  object-fit: contain;
+  background: var(--cor-fundo);
 }
 
 .card-rodape {
   display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: 0.6rem;
+  flex: 1;
   justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 1rem 1.25rem;
+  padding: 0.75rem;
+}
+
+.card-rodape .btn-fav {
+  width: 100%;
 }
 
 .selo-fav {
@@ -585,7 +592,11 @@ main {
     font-size: 3rem;
   }
 
-  .grade,
+  .grade {
+    grid-template-columns: repeat(auto-fill, minmax(13rem, 1fr));
+    gap: 1rem;
+  }
+
   .lista-favoritos {
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   }
