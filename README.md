@@ -16,8 +16,17 @@ Aplicação web desenvolvida para a disciplina de **Desenvolvimento Front-End Pa
 
 ## Estrutura de Arquivos
 
-- `index.html` — Estrutura semântica da página e estilos base.
-- `app.js` — Lógica de eventos, manipulação do DOM e persistência no `localStorage`.
+```
+catalogo-jogos-dom/
+├── index.html        # Estrutura semântica (GAMEVERSE)
+├── css/
+│   ├── reset.css     # Reset (box-sizing: border-box)
+│   └── style.css     # Variáveis, tema Dark Purple, navbar e cards
+├── js/
+│   ├── main.js       # Inicialização, menu hambúrguer e dropdown
+│   └── catalogo.js   # Dados dos jogos, favoritos e localStorage
+└── assets/           # images, videos, icons, captions (reservado)
+```
 
 ## Como Executar
 
