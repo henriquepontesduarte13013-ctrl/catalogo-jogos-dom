@@ -6,15 +6,71 @@
   <meta name="description" content="GAMEVERSE — catálogo interativo de jogos com favoritos.">
   <meta name="theme-color" content="#0d0d12">
   <title>GAMEVERSE | Catálogo de Jogos</title>
+  <link rel="icon" type="image/svg+xml" href="assets/icons/favicon.svg">
   <link rel="stylesheet" href="css/reset.css">
   <link rel="stylesheet" href="css/style.css">
   <script src="js/catalogo.js" defer></script>
+  <script src="js/graficos.js" defer></script>
   <script src="js/main.js" defer></script>
 </head>
 <body>
+  <!-- Sprite SVG: ícones reutilizados via <use> -->
+  <svg class="sprite" xmlns="http://www.w3.org/2000/svg" aria-hidden="true" focusable="false">
+    <symbol id="icon-logo" viewBox="0 0 24 24">
+      <path d="M6 7h12a4 4 0 0 1 4 4v4a3 3 0 0 1-5.2 2L15 15H9l-1.8 2A3 3 0 0 1 2 15v-4a4 4 0 0 1 4-4z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M8 10v4M6 12h4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="15.5" cy="11" r="1.1" fill="currentColor"/>
+      <circle cx="18" cy="13.5" r="1.1" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-estrela" viewBox="0 0 24 24">
+      <path d="M12 2.5l2.9 6.2 6.8.8-5 4.7 1.3 6.7L12 17.5 6 20.9l1.3-6.7-5-4.7 6.8-.8z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-lupa" viewBox="0 0 24 24">
+      <circle cx="10.5" cy="10.5" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M15.5 15.5L21 21" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-acao" viewBox="0 0 24 24">
+      <path d="M13 2L4 14h7l-1 8 9-12h-7z" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-battle-royale" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="6.5" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 2v5M12 17v5M2 12h5M17 12h5" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+      <circle cx="12" cy="12" r="1.3" fill="currentColor"/>
+    </symbol>
+    <symbol id="icon-esportes" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <path d="M12 7.5l3.6 2.6-1.4 4.2H9.8l-1.4-4.2z" fill="currentColor"/>
+      <path d="M12 7.5V3.2M15.6 10.1l4-1.3M14.2 14.3l2.6 3.4M9.8 14.3l-2.6 3.4M8.4 10.1l-4-1.3" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-mundo-aberto" viewBox="0 0 24 24">
+      <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="2"/>
+      <ellipse cx="12" cy="12" rx="4" ry="9" fill="none" stroke="currentColor" stroke-width="1.5"/>
+      <path d="M3 12h18" fill="none" stroke="currentColor" stroke-width="1.5"/>
+    </symbol>
+    <symbol id="icon-rpg" viewBox="0 0 24 24">
+      <path d="M4 20L16 8" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round"/>
+      <path d="M15 5l5-2-1 5-4 1z" fill="currentColor"/>
+      <path d="M6.5 13.5l4 4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-fps-moba" viewBox="0 0 24 24">
+      <path d="M12 3l8 3v6c0 4.5-3.2 7.8-8 9-4.8-1.2-8-4.5-8-9V6z" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round"/>
+      <path d="M12 8v8M8 12h8" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-estrategia" viewBox="0 0 24 24">
+      <path d="M5 20h14M7 20v-9h10v9M5 11V5h2.5v2h2V5h5v2h2V5H19v6z" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linejoin="round" stroke-linecap="round"/>
+    </symbol>
+    <symbol id="icon-plataforma" viewBox="0 0 24 24">
+      <path d="M3 20h6v-5h6v-5h6" fill="none" stroke="currentColor" stroke-width="2" stroke-linejoin="round" stroke-linecap="round"/>
+      <circle cx="6" cy="11.5" r="2" fill="currentColor"/>
+    </symbol>
+  </svg>
+
   <header class="site-header">
     <nav class="navbar" aria-label="Navegação principal">
-      <a class="logo" href="#inicio">GAME<span>VERSE</span></a>
+      <a class="logo" href="#inicio">
+        <svg class="icone logo-icone" aria-hidden="true" focusable="false"><use href="#icon-logo"></use></svg>
+        <span class="logo-texto">GAME<span>VERSE</span></span>
+      </a>
 
       <button class="menu-toggle" type="button" id="menu-toggle"
               aria-label="Abrir menu de navegação"
@@ -34,11 +90,7 @@
                   aria-expanded="false" aria-controls="categorias-menu">
             Categorias <span aria-hidden="true">▾</span>
           </button>
-          <ul class="dropdown__menu" id="categorias-menu">
-            <li><a href="#catalogo" data-categoria="Ação">Ação</a></li>
-            <li><a href="#catalogo" data-categoria="Battle Royale">Battle Royale</a></li>
-            <li><a href="#catalogo" data-categoria="Esportes">Esportes</a></li>
-          </ul>
+          <ul class="dropdown__menu" id="categorias-menu"><!-- itens gerados por js/catalogo.js --></ul>
         </li>
       </ul>
     </nav>
@@ -55,16 +107,17 @@
 
       <div class="filtros">
         <div class="busca">
-          <label for="campo-busca">Pesquisar jogo</label>
+          <label for="campo-busca">
+            <svg class="icone" aria-hidden="true" focusable="false"><use href="#icon-lupa"></use></svg>
+            Pesquisar jogo
+          </label>
           <input type="search" id="campo-busca" name="busca"
                  placeholder="Digite o nome do jogo..." autocomplete="off">
         </div>
 
         <div class="chips" role="group" aria-label="Filtrar por categoria">
           <button type="button" class="chip" data-categoria="todas" aria-pressed="true">Todas</button>
-          <button type="button" class="chip" data-categoria="Ação" aria-pressed="false">Ação</button>
-          <button type="button" class="chip" data-categoria="Battle Royale" aria-pressed="false">Battle Royale</button>
-          <button type="button" class="chip" data-categoria="Esportes" aria-pressed="false">Esportes</button>
+          <!-- chips de categoria gerados por js/catalogo.js -->
         </div>
       </div>
 
@@ -75,6 +128,27 @@
       </p>
     </section>
 
+    <section class="secao" id="destaque" aria-labelledby="titulo-destaque">
+      <h2 id="titulo-destaque">Destaque</h2>
+      <figure class="video-box">
+        <!-- Vídeo real: coloque destaque.mp4 (e/ou .webm) em assets/videos/ e
+             mude data-disponivel para "true". Enquanto for "false", nenhum
+             arquivo de vídeo é requisitado e o aviso abaixo é exibido. -->
+        <video id="video-destaque" controls preload="metadata" poster="assets/images/poster-destaque.svg"
+               data-disponivel="false"
+               data-mp4="assets/videos/destaque.mp4"
+               data-webm="assets/videos/destaque.webm" hidden>
+          <track kind="captions" src="assets/captions/destaque.vtt" srclang="pt-BR" label="Português (Brasil)" default>
+          Seu navegador não suporta vídeo HTML5.
+        </video>
+        <div class="video-aviso" id="video-aviso" role="status">
+          <img src="assets/images/poster-destaque.svg" alt="" width="640" height="360">
+          <p>O vídeo de destaque ainda não está disponível.</p>
+        </div>
+        <figcaption>Vídeo de destaque do GAMEVERSE, com legendas em português.</figcaption>
+      </figure>
+    </section>
+
     <section class="secao" id="favoritos" aria-labelledby="titulo-favoritos">
       <h2 id="titulo-favoritos">Favoritos</h2>
       <p id="resumo-favoritos" role="status" aria-live="polite"></p>
@@ -82,6 +156,17 @@
       <p class="mensagem" id="msg-sem-favoritos" hidden>
         Você ainda não favoritou nenhum jogo. Use o botão “Favoritar” no catálogo.
       </p>
+
+      <div class="grafico" id="grafico">
+        <h3 id="titulo-grafico">Favoritos por categoria</h3>
+        <div class="grafico__area" id="grafico-area">
+          <canvas id="grafico-favoritos" role="img"
+                  aria-labelledby="titulo-grafico" aria-describedby="grafico-legenda">
+            Gráfico de barras com a quantidade de favoritos por categoria.
+          </canvas>
+        </div>
+        <ul class="grafico__legenda" id="grafico-legenda"></ul>
+      </div>
     </section>
   </main>
 

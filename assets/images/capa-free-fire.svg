@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Ilustração abstrata de battle royale com zona circular, mira e rota de queda">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f0b1d"/><stop offset="1" stop-color="#4c1d95"/></linearGradient>
+    <radialGradient id="v" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+
+  <g fill="none" stroke="#b46cff">
+    <circle cx="320" cy="180" r="150" stroke-width="2" opacity=".25" stroke-dasharray="10 12"/>
+    <circle cx="320" cy="180" r="105" stroke-width="3" opacity=".5"/>
+    <circle cx="320" cy="180" r="60" stroke-width="4" opacity=".85"/>
+  </g>
+  <g stroke="#d9b8ff" stroke-width="4" stroke-linecap="round"><path d="M320 50v60M320 250v60M190 180h60M390 180h60"/></g>
+  <circle cx="320" cy="180" r="8" fill="#e9d5ff"/>
+  <path d="M30 50L200 110" stroke="#e9d5ff" stroke-width="2" stroke-dasharray="6 8" opacity=".6"/>
+  <path d="M200 100l22 10-22 10 5-10z" fill="#ecebf5" opacity=".9"/>
+  <circle cx="470" cy="95" r="6" fill="#b46cff" opacity=".8"/><circle cx="170" cy="265" r="9" fill="#b46cff" opacity=".5"/>
+  <rect width="640" height="360" fill="url(#v)"/>
+</svg>

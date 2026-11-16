@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Ilustração abstrata tática com lâminas angulares, golpe diagonal e orbe de habilidade">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d0d12"/><stop offset="1" stop-color="#5b21b6"/></linearGradient>
+    <radialGradient id="v" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+
+  <polygon points="0,0 260,0 130,360 0,360" fill="#2a1553" opacity=".85"/>
+  <polygon points="640,0 430,0 570,360 640,360" fill="#8b3df0" opacity=".4"/>
+  <polygon points="250,0 300,0 170,360 120,360" fill="#b46cff" opacity=".25"/>
+  <path d="M70 336L572 38" stroke="#d9b8ff" stroke-width="7" stroke-linecap="round"/><path d="M96 352L598 54" stroke="#b46cff" stroke-width="3" opacity=".7"/>
+  <polygon points="320,84 404,180 320,276 236,180" fill="none" stroke="#b46cff" stroke-width="7" stroke-linejoin="miter"/>
+  <polygon points="320,128 362,180 320,232 278,180" fill="#7c3aed" stroke="#e9d5ff" stroke-width="3"/>
+  <g fill="none" stroke="#e9d5ff" stroke-width="4" stroke-linecap="square" opacity=".85"><path d="M470 270l20 20-20 20M492 270l20 20-20 20M514 270l20 20-20 20M100 70l-20 20 20 20M122 70l-20 20 20 20"/></g>
+  <g fill="#7c3aed" stroke="#e9d5ff" stroke-width="3"><circle cx="520" cy="110" r="16"/><circle cx="130" cy="285" r="12"/></g>
+  <circle cx="520" cy="110" r="30" fill="none" stroke="#b46cff" stroke-width="2" stroke-dasharray="4 6"/>
+  <rect width="640" height="360" fill="url(#v)"/>
+</svg>

@@ -1,0 +1,15 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Ilustração abstrata de vórtice central com mapa dividido em duas bases e fileira de tropas">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d0d12"/><stop offset="1" stop-color="#4c1d95"/></linearGradient>
+    <radialGradient id="v" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+
+  <polygon points="0,0 360,0 280,360 0,360" fill="#0f0b1d" opacity=".55"/>
+  <path d="M0 360L640 0" stroke="#b46cff" stroke-width="2" opacity=".35"/>
+  <circle cx="320" cy="180" r="146" fill="none" stroke="#8b3df0" stroke-width="4" stroke-dasharray="120 60" transform="rotate(10 320 180)" opacity="0.5"/><circle cx="320" cy="180" r="112" fill="none" stroke="#b46cff" stroke-width="5" stroke-dasharray="90 50" transform="rotate(90 320 180)" opacity="0.7"/><circle cx="320" cy="180" r="78" fill="none" stroke="#d9b8ff" stroke-width="5" stroke-dasharray="60 40" transform="rotate(200 320 180)" opacity="0.8"/><circle cx="320" cy="180" r="46" fill="none" stroke="#e9d5ff" stroke-width="4" stroke-dasharray="30 24" transform="rotate(40 320 180)" opacity="0.9"/><circle cx="320" cy="180" r="22" fill="#b46cff"/><circle cx="320" cy="180" r="10" fill="#e9d5ff"/>
+  <circle cx="40" cy="330" r="3.5" fill="#e9d5ff"/><circle cx="86.7" cy="320.2" r="3.5" fill="#e9d5ff"/><circle cx="133.3" cy="306.9" r="3.5" fill="#e9d5ff"/><circle cx="180" cy="287.4" r="3.5" fill="#e9d5ff"/><circle cx="226.7" cy="260.6" r="3.5" fill="#e9d5ff"/><circle cx="273.3" cy="227.1" r="3.5" fill="#e9d5ff"/><circle cx="320" cy="189.2" r="3.5" fill="#e9d5ff"/><circle cx="366.7" cy="150.3" r="3.5" fill="#e9d5ff"/><circle cx="413.3" cy="114" r="3.5" fill="#e9d5ff"/><circle cx="460" cy="83.2" r="3.5" fill="#e9d5ff"/><circle cx="506.7" cy="59.6" r="3.5" fill="#e9d5ff"/><circle cx="553.3" cy="43" r="3.5" fill="#e9d5ff"/><circle cx="600" cy="31.6" r="3.5" fill="#e9d5ff"/>
+  <polygon points="70,266 99.4,283 99.4,317 70,334 40.6,317 40.6,283" fill="#2a1553" stroke="#b46cff" stroke-width="4"/><polygon points="570,26 599.4,43 599.4,77 570,94 540.6,77 540.6,43" fill="#2a1553" stroke="#d9b8ff" stroke-width="4"/>
+  <polygon points="70,282 88,312 52,312" fill="#b46cff"/><polygon points="570,78 588,48 552,48" fill="#d9b8ff"/>
+  <rect width="640" height="360" fill="url(#v)"/>
+</svg>
