@@ -1,0 +1,21 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Ilustração abstrata de passagem tática com sacos de areia, fumaça e bomba plantada">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0f0b1d"/><stop offset="1" stop-color="#4c1d95"/></linearGradient>
+    <radialGradient id="v" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+
+  <polygon points="215,90 425,90 425,360 215,360" fill="#e9d5ff" opacity=".16"/>
+  <polygon points="215,90 425,90 470,360 170,360" fill="#e9d5ff" opacity=".1"/>
+  <rect x="0" y="80" width="215" height="280" fill="#2a1553"/><rect x="425" y="80" width="215" height="280" fill="#2a1553"/>
+  <g stroke="#8b3df0" stroke-width="2" opacity=".5"><path d="M0 140h215M0 200h215M0 260h215M425 140h215M425 200h215M425 260h215"/></g>
+  <rect x="195" y="70" width="250" height="24" fill="#0f0b1d"/>
+  <g fill="#e9d5ff" opacity=".13"><circle cx="300" cy="200" r="60"/><circle cx="350" cy="230" r="76"/><circle cx="280" cy="250" r="54"/></g>
+  <rect y="332" width="640" height="28" fill="#0f0b1d"/>
+  <rect x="30" y="318" width="64" height="24" rx="12" fill="#3b1a78" stroke="#8b3df0" stroke-width="2"/><rect x="96" y="318" width="64" height="24" rx="12" fill="#2a1553" stroke="#8b3df0" stroke-width="2"/><rect x="162" y="318" width="64" height="24" rx="12" fill="#3b1a78" stroke="#8b3df0" stroke-width="2"/><rect x="60" y="294" width="64" height="24" rx="12" fill="#2a1553" stroke="#8b3df0" stroke-width="2"/><rect x="126" y="294" width="64" height="24" rx="12" fill="#3b1a78" stroke="#8b3df0" stroke-width="2"/><rect x="92" y="270" width="64" height="24" rx="12" fill="#2a1553" stroke="#8b3df0" stroke-width="2"/>
+  <rect x="280" y="290" width="104" height="48" rx="8" fill="#0f0b1d" stroke="#b46cff" stroke-width="3"/>
+  <rect x="292" y="300" width="50" height="20" rx="3" fill="#b46cff"/><g fill="#0f0b1d"><rect x="298" y="306" width="8" height="8"/><rect x="312" y="306" width="8" height="8"/><rect x="326" y="306" width="8" height="8"/></g>
+  <circle cx="362" cy="310" r="8" fill="#e9d5ff"/><path d="M384 314c30 0 40-26 70-20" stroke="#d9b8ff" stroke-width="3" fill="none"/>
+  <g fill="#e9d5ff" opacity=".6"><circle cx="490" cy="150" r="3"/><circle cx="520" cy="190" r="2"/></g>
+  <rect width="640" height="360" fill="url(#v)"/>
+</svg>

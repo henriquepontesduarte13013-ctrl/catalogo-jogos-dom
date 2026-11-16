@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Ilustração abstrata de ação arcade com raio e faixas diagonais">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#1a1230"/><stop offset="1" stop-color="#5b21b6"/></linearGradient>
+    <radialGradient id="v" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+
+  <defs><linearGradient id="r" x1="0" y1="0" x2="0" y2="1"><stop offset="0" stop-color="#d9b8ff"/><stop offset="1" stop-color="#8b3df0"/></linearGradient></defs>
+  <g opacity=".18" fill="#b46cff"><polygon points="0,300 200,0 260,0 60,360 0,360"/><polygon points="380,360 560,0 620,0 440,360"/></g>
+  <g stroke="#b46cff" stroke-width="4" stroke-linecap="round" opacity=".6"><path d="M90 90l-30-14M96 118l-38 2M520 250l30 14M510 276l36 6"/></g>
+  <polygon points="360,40 250,200 320,200 280,320 410,150 335,150" fill="url(#r)"/>
+  <circle cx="470" cy="90" r="26" fill="none" stroke="#b46cff" stroke-width="4" opacity=".7"/>
+  <circle cx="150" cy="270" r="14" fill="#b46cff" opacity=".6"/>
+  <polygon points="170,106 173.5,116.5 184,120 173.5,123.5 170,134 166.5,123.5 156,120 166.5,116.5" fill="#e9d5ff" opacity="0.8"/><polygon points="500,188 503,197 512,200 503,203 500,212 497,203 488,200 497,197" fill="#e9d5ff" opacity="0.8"/><polygon points="240,290 242.5,297.5 250,300 242.5,302.5 240,310 237.5,302.5 230,300 237.5,297.5" fill="#e9d5ff" opacity="0.8"/>
+  <rect width="640" height="360" fill="url(#v)"/>
+</svg>

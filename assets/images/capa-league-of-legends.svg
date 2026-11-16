@@ -1,0 +1,16 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Ilustração abstrata de mapa de três rotas com torres, rio e cristais nos extremos">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#120a24"/><stop offset="1" stop-color="#5b21b6"/></linearGradient>
+    <radialGradient id="v" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+
+  <polygon points="320,22 604,180 320,338 36,180" fill="#2a1553" fill-opacity=".75" stroke="#8b3df0" stroke-width="3"/>
+  <path d="M120 100L520 262" stroke="#b46cff" stroke-width="22" opacity=".28" stroke-linecap="round"/>
+  <g fill="none" stroke="#d9b8ff" stroke-width="5" stroke-linecap="round" stroke-linejoin="round"><path d="M64 300L580 60"/><path d="M60 188L320 40 580 172" opacity=".8"/><path d="M80 210L320 322 560 190" opacity=".8"/></g>
+  <g fill="#e9d5ff" stroke="#0f0b1d" stroke-width="2"><polygon points="196,246 206,246 210,262 192,262"/><polygon points="440,126 450,126 454,142 436,142"/><polygon points="164,130 174,130 178,146 160,146"/><polygon points="466,210 476,210 480,226 462,226"/></g>
+  <polygon points="64,274 86.5,287 86.5,313 64,326 41.5,313 41.5,287" fill="#b46cff" stroke="#e9d5ff" stroke-width="3"/><polygon points="580,34 602.5,47 602.5,73 580,86 557.5,73 557.5,47" fill="#7c3aed" stroke="#e9d5ff" stroke-width="3"/>
+  <circle cx="64" cy="300" r="42" fill="#b46cff" opacity=".2"/><circle cx="580" cy="60" r="42" fill="#7c3aed" opacity=".25"/>
+  <polygon points="310,140 312.5,147.5 320,150 312.5,152.5 310,160 307.5,152.5 300,150 307.5,147.5" fill="#e9d5ff" opacity="0.8"/><polygon points="330,207 332,213 338,215 332,217 330,223 328,217 322,215 328,213" fill="#e9d5ff" opacity="0.8"/><polygon points="100,61 102.2,67.8 109,70 102.2,72.2 100,79 97.8,72.2 91,70 97.8,67.8" fill="#e9d5ff" opacity="0.8"/>
+  <rect width="640" height="360" fill="url(#v)"/>
+</svg>

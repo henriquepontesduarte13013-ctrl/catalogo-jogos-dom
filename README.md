@@ -4,31 +4,46 @@ Aplicação web desenvolvida para a disciplina de **Desenvolvimento Front-End Pa
 
 ## Funcionalidades
 
-- **Favoritar e Desfavoritar Jogos:** Alternância dinâmica de estado visual dos cards (`.favorito`) e atualização do texto dos botões (`Favoritar` / `★ Favoritado`).
-- **Persistência Local (`localStorage`):** Os jogos marcados como favoritos permanecem salvos no navegador mesmo após recarregar ou fechar a página.
-- **Delegação de Eventos (*Event Delegation*):** Uso de um único `addEventListener` no container pai (`#grade-itens`) com `closest()` para capturar cliques nos botões de forma performática.
+- **Catálogo com 30 jogos** em 8 categorias: Ação e Aventura, Battle Royale, Esportes e Corrida, Mundo Aberto e Sandbox, RPG, FPS e MOBA, Estratégia e Simulação, e Plataforma, Luta e Terror.
+- **Pesquisa por nome:** atualiza a cada tecla, sem diferenciar maiúsculas/minúsculas nem acentos.
+- **Filtro por categoria:** chips e menu *Categorias* (gerados a partir dos dados em `js/catalogo.js`); combina com a pesquisa.
+- **Favoritos:** favoritar/desfavoritar nos cards, lista na seção Favoritos com opção de remover, persistência em `localStorage` (chave `jogosFavoritos`) e *Event Delegation*.
+- **SVG:** sprite inline de ícones (`<symbol>`/`<use>`), logo, favicon e uma capa ilustrativa original e exclusiva para cada um dos 30 jogos (`assets/images/capa-*.svg`, sem artes ou logotipos oficiais).
+- **Canvas:** gráfico de barras horizontais "Favoritos por categoria" (todas as categorias, inclusive as com zero favoritos), redesenhado a cada alteração e ao redimensionar a tela, com alternativa em texto para leitores de tela.
+- **Vídeo de destaque:** player `<video>` com legendas (`<track>`) e aviso de fallback quando o arquivo não existe.
+- **Estados vazios, responsividade e acessibilidade** (ARIA, `aria-live`, foco visível).
 
 ## Tecnologias e Conceitos Aplicados
 
-- **HTML5 Semântico:** Estruturação com `<header>`, `<main>`, `<section>`, `<article>` e atributos personalizados `data-titulo`.
-- **CSS3:** Estilização limpa dos cards com Flexbox e destaque visual para itens favoritados.
-- **JavaScript (ES6+):** Manipulação de DOM (`querySelector`, `querySelectorAll`, `classList`, `dataset`, `textContent`) e armazenamento no navegador (`localStorage`, `JSON.parse`, `JSON.stringify`).
+- **HTML5 Semântico:** `<header>`, `<main>`, `<section>`, `<article>`, `<figure>`, `<video>`, `<canvas>` e atributos `data-*`.
+- **CSS3:** variáveis em `:root`, Flexbox, Grid, tema Dark Purple e media queries.
+- **JavaScript (ES6+):** manipulação do DOM sem `innerHTML`, `CustomEvent`, `ResizeObserver`, API Canvas 2D e `localStorage`.
 
 ## Estrutura de Arquivos
 
 ```
 catalogo-jogos-dom/
-├── index.html        # Estrutura semântica (GAMEVERSE)
+├── index.html          # Estrutura semântica e sprite SVG
 ├── css/
-│   ├── reset.css     # Reset (box-sizing: border-box)
-│   └── style.css     # Variáveis, tema Dark Purple, navbar e cards
+│   ├── reset.css       # Reset (box-sizing: border-box)
+│   └── style.css       # Variáveis, tema Dark Purple e componentes
 ├── js/
-│   ├── main.js       # Inicialização, menu hambúrguer e dropdown
-│   └── catalogo.js   # Dados dos jogos, favoritos e localStorage
-└── assets/           # images, videos, icons, captions (reservado)
+│   ├── main.js         # Inicialização, menu, dropdown e fallback do vídeo
+│   ├── catalogo.js     # Dados (30 jogos, 8 categorias), pesquisa, filtros e favoritos
+│   └── graficos.js     # Gráfico de barras em Canvas
+└── assets/
+    ├── images/         # 30 capas (capa-*.svg) e pôster do vídeo (SVG)
+    ├── icons/          # Favicon
+    ├── captions/       # Legendas WebVTT
+    └── videos/         # Coloque aqui destaque.mp4 / destaque.webm
 ```
 
 ## Como Executar
 
+Use um servidor local (necessário para carregar as legendas `<track>`, que o navegador bloqueia em `file://`):
+
 1. Clone ou baixe este repositório.
-2. Abra o arquivo `index.html` diretamente em qualquer navegador web moderno.
+2. Na pasta do projeto, execute: `python -m http.server 8000`
+3. Acesse `http://localhost:8000` no navegador.
+
+O vídeo de destaque não acompanha o repositório: adicione `assets/videos/destaque.mp4` (e, opcionalmente, `destaque.webm`) para ativar o player. Sem ele, a página mostra um aviso.

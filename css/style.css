@@ -34,6 +34,21 @@ body {
   outline-offset: 2px;
 }
 
+/* ---------- Ícones SVG ---------- */
+.sprite {
+  position: absolute;
+  width: 0;
+  height: 0;
+  overflow: hidden;
+}
+
+.icone {
+  width: 1.1em;
+  height: 1.1em;
+  flex-shrink: 0;
+  vertical-align: -0.15em;
+}
+
 /* ---------- Cabeçalho e navegação ---------- */
 .site-header {
   position: sticky;
@@ -56,12 +71,22 @@ body {
 }
 
 .logo {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
   font-size: 1.5rem;
   font-weight: 800;
   letter-spacing: 0.08em;
 }
 
-.logo span {
+.logo-icone {
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--cor-neon);
+  filter: drop-shadow(0 0 6px var(--cor-neon-brilho));
+}
+
+.logo-texto span {
   color: var(--cor-neon);
   text-shadow: 0 0 12px var(--cor-neon-brilho);
 }
@@ -76,6 +101,8 @@ body {
   left: 0;
   right: 0;
   padding: 1rem;
+  max-height: calc(100vh - var(--altura-navbar));
+  overflow-y: auto;
   background: var(--cor-grafite);
   border-bottom: 1px solid var(--cor-borda);
 }
@@ -206,11 +233,10 @@ main {
 }
 
 .card {
+  position: relative;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
-  gap: 1rem;
-  padding: 1.25rem;
+  flex-direction: column;
+  overflow: hidden;
   background: var(--cor-grafite);
   border: 1px solid var(--cor-borda);
   border-radius: var(--raio);
@@ -219,6 +245,37 @@ main {
 
 .card:hover {
   border-color: var(--cor-primaria);
+}
+
+.card-capa {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
+  background: var(--cor-grafite-claro);
+}
+
+.card-rodape {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding: 1rem 1.25rem;
+}
+
+.selo-fav {
+  position: absolute;
+  top: 0.75rem;
+  right: 0.75rem;
+  display: none;
+  width: 1.75rem;
+  height: 1.75rem;
+  color: var(--cor-neon);
+  filter: drop-shadow(0 0 6px var(--cor-neon-brilho));
+}
+
+.card.favorito .selo-fav {
+  display: block;
 }
 
 .card-titulo {
@@ -264,6 +321,9 @@ main {
 }
 
 .busca label {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   font-size: 0.875rem;
   color: var(--cor-texto-suave);
 }
@@ -300,6 +360,9 @@ main {
 }
 
 .chip {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.4rem;
   padding: 0.45rem 1rem;
   border: 1px solid var(--cor-borda);
   border-radius: 999px;
@@ -374,6 +437,16 @@ main {
   border-radius: var(--raio);
 }
 
+.item-estrela {
+  width: 1.5rem;
+  height: 1.5rem;
+  color: var(--cor-neon);
+}
+
+.favorito-item .card-info {
+  flex: 1;
+}
+
 .btn-remover {
   padding: 0.4rem 0.9rem;
   border: 1px solid var(--cor-borda);
@@ -386,6 +459,75 @@ main {
   color: var(--cor-texto);
   border-color: var(--cor-neon);
   background: var(--cor-grafite-claro);
+}
+
+/* ---------- Vídeo de destaque ---------- */
+.video-box {
+  max-width: 48rem;
+  margin: 0 auto;
+}
+
+.video-box video,
+.video-aviso img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 16 / 9;
+  background: var(--cor-fundo);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.video-box video[hidden],
+.video-aviso[hidden] {
+  display: none;
+}
+
+.video-aviso p {
+  margin-top: 0.6rem;
+  padding: 0.6rem 1rem;
+  text-align: center;
+  color: var(--cor-texto);
+  background: var(--cor-grafite);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.video-box figcaption {
+  margin-top: 0.6rem;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
+}
+
+/* ---------- Gráfico (Canvas) ---------- */
+.grafico {
+  margin-top: 2rem;
+  padding: 1.25rem;
+  background: var(--cor-grafite);
+  border: 1px solid var(--cor-borda);
+  border-radius: var(--raio);
+}
+
+.grafico h3 {
+  margin-bottom: 1rem;
+  font-size: 1.125rem;
+}
+
+.grafico__area {
+  width: 100%;
+}
+
+.grafico canvas {
+  display: block;
+  max-width: 100%;
+}
+
+.grafico__legenda {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 1rem;
+  font-size: 0.875rem;
+  color: var(--cor-texto-suave);
 }
 
 /* ---------- Rodapé ---------- */
@@ -410,6 +552,8 @@ main {
     align-items: center;
     position: static;
     padding: 0;
+    max-height: none;
+    overflow: visible;
     gap: 0.5rem;
     background: transparent;
     border: 0;
@@ -427,7 +571,9 @@ main {
     position: absolute;
     top: 100%;
     right: 0;
-    min-width: 12rem;
+    min-width: 17rem;
+    max-height: calc(100vh - var(--altura-navbar) - 1rem);
+    overflow-y: auto;
     margin: 0.5rem 0 0;
     padding: 0.5rem;
     background: var(--cor-grafite);
@@ -444,14 +590,7 @@ main {
     grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
   }
 
-  .filtros {
-    flex-direction: row;
-    align-items: flex-end;
-    justify-content: space-between;
-  }
-
   .busca {
-    flex: 1;
     max-width: 24rem;
   }
 }

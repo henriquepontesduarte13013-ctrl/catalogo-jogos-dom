@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 360" width="640" height="360" role="img" aria-label="Ilustração abstrata de caverna sombria com estalactites, lanterna luminosa, arco e esferas de alma">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0d0d12"/><stop offset="1" stop-color="#2a1553"/></linearGradient>
+    <radialGradient id="v" cx=".5" cy=".5" r=".75"><stop offset=".6" stop-color="#000" stop-opacity="0"/><stop offset="1" stop-color="#000" stop-opacity=".45"/></radialGradient>
+  </defs>
+  <rect width="640" height="360" fill="url(#g)"/>
+
+  <defs><radialGradient id="l"><stop offset="0" stop-color="#e9d5ff" stop-opacity=".9"/><stop offset=".4" stop-color="#b46cff" stop-opacity=".35"/><stop offset="1" stop-color="#b46cff" stop-opacity="0"/></radialGradient></defs>
+  <path d="M200 360V220a120 120 0 0 1 240 0V360" fill="none" stroke="#8b3df0" stroke-width="5" opacity=".6"/>
+  <path d="M236 360V228a84 84 0 0 1 168 0V360" fill="#0f0b1d" opacity=".6"/>
+  <circle cx="320" cy="170" r="110" fill="url(#l)"/>
+  <path d="M320 0V104" stroke="#d9b8ff" stroke-width="3"/>
+  <path d="M304 108h32l8 12v34a24 24 0 0 1-48 0v-34z" fill="#e9d5ff" stroke="#b46cff" stroke-width="3"/><circle cx="320" cy="140" r="10" fill="#ecebf5"/>
+  <path d="M0 0H640V30L610 20 590 70 566 24 520 96 490 30 440 62 410 22 360 120 330 30 290 78 252 22 200 100 168 26 120 66 90 24 50 84 20 26 0 40z" fill="#0f0b1d"/><path d="M0 360V318L40 290 70 330 110 280 150 332 200 296 240 334 290 300 330 336 380 288 420 330 470 296 510 334 560 292 600 326 640 300V360z" fill="#0f0b1d"/>
+  <g fill="none" stroke="#8b3df0" stroke-width="3" stroke-linecap="round" opacity=".85"><path d="M40 300c30-30 10-60 40-80M80 220l-10-14M64 258l-14-8M600 300c-30-30-10-60-40-80M560 220l10-14M576 258l14-8"/></g>
+  <g fill="#e9d5ff" opacity=".9"><circle cx="190" cy="150" r="5"/><circle cx="460" cy="130" r="4"/><circle cx="500" cy="220" r="5"/><circle cx="150" cy="240" r="4"/><circle cx="380" cy="250" r="3"/></g>
+  <rect width="640" height="360" fill="url(#v)"/>
+</svg>
