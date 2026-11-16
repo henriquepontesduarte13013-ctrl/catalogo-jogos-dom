@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="description" content="GAMEVERSE — catálogo interativo de jogos com favoritos.">
+  <meta name="theme-color" content="#0d0d12">
+  <title>GAMEVERSE | Catálogo de Jogos</title>
+  <link rel="stylesheet" href="css/reset.css">
+  <link rel="stylesheet" href="css/style.css">
+  <script src="js/catalogo.js" defer></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <header class="site-header">
+    <nav class="navbar" aria-label="Navegação principal">
+      <a class="logo" href="#inicio">GAME<span>VERSE</span></a>
+
+      <button class="menu-toggle" type="button" id="menu-toggle"
+              aria-label="Abrir menu de navegação"
+              aria-expanded="false"
+              aria-controls="menu-principal">
+        <span class="menu-toggle__barra"></span>
+        <span class="menu-toggle__barra"></span>
+        <span class="menu-toggle__barra"></span>
+      </button>
+
+      <ul class="nav-menu" id="menu-principal">
+        <li><a class="nav-link" href="#inicio">Início</a></li>
+        <li><a class="nav-link" href="#catalogo">Catálogo</a></li>
+        <li><a class="nav-link" href="#favoritos">Favoritos</a></li>
+        <li class="dropdown">
+          <button class="nav-link dropdown__toggle" type="button" id="categorias-toggle"
+                  aria-expanded="false" aria-controls="categorias-menu">
+            Categorias <span aria-hidden="true">▾</span>
+          </button>
+          <ul class="dropdown__menu" id="categorias-menu">
+            <li><a href="#catalogo">Ação</a></li>
+            <li><a href="#catalogo">Battle Royale</a></li>
+            <li><a href="#catalogo">Esportes</a></li>
+          </ul>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main>
+    <section class="hero" id="inicio">
+      <h1>Bem-vindo à <span class="destaque">GAMEVERSE</span></h1>
+      <p>Explore o catálogo e marque seus jogos favoritos.</p>
+    </section>
+
+    <section class="secao" id="catalogo" aria-labelledby="titulo-catalogo">
+      <h2 id="titulo-catalogo">Catálogo de Jogos</h2>
+      <div class="grade" id="grade-itens"></div>
+    </section>
+
+    <section class="secao" id="favoritos" aria-labelledby="titulo-favoritos">
+      <h2 id="titulo-favoritos">Favoritos</h2>
+      <p id="resumo-favoritos" aria-live="polite"></p>
+    </section>
+  </main>
+
+  <footer class="site-footer">
+    <p>&copy; GAMEVERSE — projeto acadêmico <code>catalogo-jogos-dom</code></p>
+  </footer>
+</body>
+</html>
