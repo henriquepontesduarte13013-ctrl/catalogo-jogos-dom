@@ -35,9 +35,9 @@
             Categorias <span aria-hidden="true">▾</span>
           </button>
           <ul class="dropdown__menu" id="categorias-menu">
-            <li><a href="#catalogo">Ação</a></li>
-            <li><a href="#catalogo">Battle Royale</a></li>
-            <li><a href="#catalogo">Esportes</a></li>
+            <li><a href="#catalogo" data-categoria="Ação">Ação</a></li>
+            <li><a href="#catalogo" data-categoria="Battle Royale">Battle Royale</a></li>
+            <li><a href="#catalogo" data-categoria="Esportes">Esportes</a></li>
           </ul>
         </li>
       </ul>
@@ -52,12 +52,36 @@
 
     <section class="secao" id="catalogo" aria-labelledby="titulo-catalogo">
       <h2 id="titulo-catalogo">Catálogo de Jogos</h2>
+
+      <div class="filtros">
+        <div class="busca">
+          <label for="campo-busca">Pesquisar jogo</label>
+          <input type="search" id="campo-busca" name="busca"
+                 placeholder="Digite o nome do jogo..." autocomplete="off">
+        </div>
+
+        <div class="chips" role="group" aria-label="Filtrar por categoria">
+          <button type="button" class="chip" data-categoria="todas" aria-pressed="true">Todas</button>
+          <button type="button" class="chip" data-categoria="Ação" aria-pressed="false">Ação</button>
+          <button type="button" class="chip" data-categoria="Battle Royale" aria-pressed="false">Battle Royale</button>
+          <button type="button" class="chip" data-categoria="Esportes" aria-pressed="false">Esportes</button>
+        </div>
+      </div>
+
+      <p class="status" id="status-catalogo" role="status" aria-live="polite"></p>
       <div class="grade" id="grade-itens"></div>
+      <p class="mensagem" id="msg-sem-resultados" hidden>
+        Nenhum jogo encontrado. Tente outro nome ou escolha outra categoria.
+      </p>
     </section>
 
     <section class="secao" id="favoritos" aria-labelledby="titulo-favoritos">
       <h2 id="titulo-favoritos">Favoritos</h2>
-      <p id="resumo-favoritos" aria-live="polite"></p>
+      <p id="resumo-favoritos" role="status" aria-live="polite"></p>
+      <ul class="lista-favoritos" id="lista-favoritos"></ul>
+      <p class="mensagem" id="msg-sem-favoritos" hidden>
+        Você ainda não favoritou nenhum jogo. Use o botão “Favoritar” no catálogo.
+      </p>
     </section>
   </main>
 
