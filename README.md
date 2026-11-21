@@ -1,4 +1,4 @@
-# Catálogo Interativo de Jogos (`catalogo-jogos-dom`)
+# Catálogo Interativo de Jogos
 
 Aplicação web desenvolvida para a disciplina de **Desenvolvimento Front-End Para Web**, com foco em manipulação dinâmica do DOM utilizando HTML5, CSS3 e JavaScript puro (Vanilla JS).
 
@@ -90,3 +90,10 @@ Use um servidor local (necessário para carregar as legendas `<track>`, que o na
 3. Acesse `http://localhost:8000` no navegador.
 
 O vídeo de destaque não acompanha o repositório: adicione `assets/videos/destaque.mp4` (e, opcionalmente, `destaque.webm`) para ativar o player. Sem ele, a página mostra um aviso.
+
+## Avaliação em Pares
+
+Esta seção será preenchida conforme as orientações da disciplina, incluindo as avaliações realizadas pelos integrantes do grupo.
+
+**Avaliações pendentes:** aguardando realização e preenchimento.
+
